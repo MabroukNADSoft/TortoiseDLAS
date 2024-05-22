@@ -30,7 +30,7 @@ from x_transformers.x_transformers import (
     not_equals,
 )
 
-from lucidrains.x_transformers import (
+from ...lucidrains.x_transformers import (
     FixedPositionalEmbedding,
     LearnedAlibiPositionalBias,
 )
