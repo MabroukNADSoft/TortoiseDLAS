@@ -15,7 +15,7 @@ datasets:
         n_workers: 8 # idk what this does
         batch_size: 128 # This leads to ~16GB of vram usage on my 3090.
         mode: paired_voice_audio
-        path: ../../../dataset/train.txt
+        path: ../../../datasets/tts_7h/train.txt
         fetcher_mode: ["lj"] # CHANGEME if your dataset isn't in LJSpeech format
         phase: train
         max_wav_length: 255995
@@ -32,7 +32,7 @@ datasets:
         n_workers: 1
         batch_size: 64 # this could be higher probably
         mode: paired_voice_audio
-        path: ../../../dataset/val.txt
+        path: ../../../datasets/tts_7h/val.txt
         fetcher_mode: ["lj"]
         phase: val # might be broken idk
         max_wav_length: 255995
