@@ -58,13 +58,12 @@ def transliteration_cleaners(text):
 
 
 def phonemic_transcription(text):
+    """Pipeline for Arabic text that adds phonemic transcription."""
     text = Punctuation(';:,.!"?()-').remove(text)
-    words = text.split()  # split the text into a list of words
+    words = text.split()
     backend = EspeakBackend("ar")
     separator = Separator(phone=" ", word=None)
-    phonemes = backend.phonemize(
-        words, separator=separator
-    )  # pass the separator to phonemize
+    phonemes = backend.phonemize(words, separator=separator)
     return phonemes
 
 
